@@ -1,0 +1,22 @@
+<html>
+<title> Web Crawler</title>
+<head>
+</head>
+<body>
+<center>
+<div style="margin-top:140px";>
+<% form_tag("/search", :method => "get") do %>  
+<%= label_tag(:q, "Enter Url:") %>  
+<br />
+<%= text_field_tag(:q) %>  
+<br />
+<%= label_tag(:em, "Email:") %>  
+<br />
+<%= text_field_tag(:em) %>  
+<br />
+<%= submit_tag("Crawl") %> 
+<% end %>
+</div>
+</center>
+</body>
+</html>
