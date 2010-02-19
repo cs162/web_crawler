@@ -1,6 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :urlinfos
-map.search "search", :controller => "search"
+  map.resources :urls
+
+  map.resources :urls
+
+  map.search "search", :controller => "search"
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

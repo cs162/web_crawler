@@ -9,13 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100121095227) do
+ActiveRecord::Schema.define(:version => 20100219121616) do
 
-  create_table "urlinfos", :force => true do |t|
-    t.string   "url"
+  create_table "urls", :force => true do |t|
+    t.string   "url_name"
     t.text     "title"
     t.text     "description"
-    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,11 +1,15 @@
-<h1>New urlinfo</h1>
+<h1>New url</h1>
 
-<% form_for(@urlinfo) do |f| %>
+<% form_for(@url) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :url_name %><br />
+    <%= f.text_field :url_name %>
   </p>
   <p>
     <%= f.label :title %><br />
@@ -16,12 +20,8 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </p>
-  <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', urlinfos_path %>
+<%= link_to 'Back', urls_path %>
