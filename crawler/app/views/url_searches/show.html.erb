@@ -1,0 +1,23 @@
+<p>
+  <b>Id:</b>
+  <%=h @url_search.id %>
+</p>
+
+<p>
+  <b>Url name:</b>
+  <%=h @url_search.url_name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @url_search.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @url_search.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_url_search_path(@url_search) %> |
+<%= link_to 'Back', url_searches_path %>

@@ -1,0 +1,36 @@
+<html>
+<title> Web Crawler</title>
+<head>
+</head>
+<body>
+<center>
+<div style="margin-top:140px";>
+<% form_tag("/query", :method => "get") do %>  
+<%= label_tag(:q, "Search URL:") %>  
+<br />
+<%= text_field_tag(:q) %>  
+<%= hidden_field_tag(:u,options=@iurl) %>  
+<br />
+<%= submit_tag("Search") %> 
+<% end %>
+</div>
+
+<% if (@all_res != nil) %>
+
+<% @all_res.each do |a| %>
+<div style="float:left;padding:20px;margin: 0px 470px 0px 20px;"> 
+    <a href="<%=h a.url_name %>" style="float:left;"><%=h a.url_name %></a>
+	<br />
+    <span style="float:left;margin-right:100px"><%=h a.title %></span>
+	<br />
+    <span style="float:left;margin-right:100px"><%=h a.description %></span>
+	<br />
+</div>
+<% end %>
+
+<% end %>
+
+
+</center>
+</body>
+</html>

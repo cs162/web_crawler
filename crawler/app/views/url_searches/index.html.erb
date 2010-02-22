@@ -1,0 +1,26 @@
+<h1>Listing url_searches</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Url name</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+<% @url_searches.each do |url_search| %>
+  <tr>
+    <td><%=h url_search.id %></td>
+    <td><%=h url_search.url_name %></td>
+    <td><%=h url_search.title %></td>
+    <td><%=h url_search.description %></td>
+    <td><%= link_to 'Show', url_search %></td>
+    <td><%= link_to 'Edit', edit_url_search_path(url_search) %></td>
+    <td><%= link_to 'Destroy', url_search, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New url_search', new_url_search_path %>
